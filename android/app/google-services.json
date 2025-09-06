@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "451138635293",
+    "project_id": "field-manger-30232",
+    "storage_bucket": "field-manger-30232.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451138635293:android:af9afb0fd2e4271e2aa8f4",
+        "android_client_info": {
+          "package_name": "com.czappstudio.open_core_hr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPGLilx-b1ZlBEIE8dztv34Wup6jgOC10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451138635293:android:d6d01ecd4915fc982aa8f4",
+        "android_client_info": {
+          "package_name": "com.webentix.trackkaro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPGLilx-b1ZlBEIE8dztv34Wup6jgOC10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
