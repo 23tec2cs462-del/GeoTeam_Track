@@ -78,8 +78,8 @@ const activityCountPref = 'activityCount';
 
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=';
 const privacyPolicyUrl = 'privacy-policy.html';
-const mainAppName = 'trackkaro';
-const appDescription = "$mainAppName is a open source AI Powered HRMS by webentix.";
+const mainAppName = 'GeoTeam Track';
+const appDescription = "$mainAppName is a open source AI Powered HRMS.";
 
 /* font sizes*/
 const fontSizeButton = 13;

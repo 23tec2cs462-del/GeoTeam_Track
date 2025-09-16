@@ -483,37 +483,7 @@ class FooterSignature extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 18.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  "Code with ",
-                  style: TextStyle(fontSize: 14, color: textColor),
-                ),
-                Icon(Icons.favorite, size: 16, color: iconColor),
-                Text(
-                  " by $companyName",
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: textColor,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            5.height,
-            Text(
-              '$mainAppName ${getStringAsync(appVersionPref)}',
-              style: secondaryTextStyle(),
-            ),
-          ],
-        ),
-      ),
-    );
+    return const SizedBox();
   }
 }
 

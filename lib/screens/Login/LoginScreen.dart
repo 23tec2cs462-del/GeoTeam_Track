@@ -40,48 +40,6 @@ class _LoginScreenState extends State<LoginScreen> {
     _loginStore.setupValidations();
   }
 
-  Widget demoModeWidget() {
-    return Column(
-      children: [
-        Column(
-          children: [
-            Text(
-              'App is in demo mode',
-              style: boldTextStyle(
-                size: 16,
-                color: white,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            8.height,
-            Text(
-              'You can login with demo employee id and password',
-              style: secondaryTextStyle(size: 14, color: white),
-              textAlign: TextAlign.center,
-            ),
-            8.height,
-            Observer(
-              builder: (_) => _loginStore.isDemoRegisterBtnLoading
-                  ? loadingWidgetMaker()
-                  : button(
-                      'Register as a demo employee',
-                      color: Colors.red,
-                      onTap: () async {
-                        var result = await _loginStore.createDemoUser();
-                        if (result.toLowerCase() == 'active') {
-                          if (!mounted) return;
-                          sharedHelper.refreshAppSettings();
-                          const DeviceVerificationScreen()
-                              .launch(context, isNewTask: true);
-                        }
-                      },
-                    ),
-            ),
-          ],
-        )
-      ],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -154,27 +112,15 @@ class _LoginScreenState extends State<LoginScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   // **App Logo**
-                                  getStringAsync(appCompanyLogoPref).isNotEmpty
-                                      ? Image.network(
-                                          loadingBuilder:
-                                              (context, child, progress) {
-                                            return progress == null
-                                                ? child
-                                                : buildShimmer(90, 90);
-                                          },
-                                          height: 90,
-                                          getStringAsync(appCompanyLogoPref),
-                                        )
-                                      : Image.asset(
-                                          appLogoImg,
-                                          height: 90,
-                                          width: 90,
-                                        ),
+                                  12.height,
+                                  Image.asset(
+                                    appLogoImg,
+                                    height: 90,
+                                    width: 90,
+                                  ),
                                   12.height,
                                   Text(
-                                    getStringAsync(appCompanyNamePref).isEmpty
-                                        ? mainAppName
-                                        : getStringAsync(appCompanyNamePref),
+                                    mainAppName,
                                     style: boldTextStyle(
                                         size: 24,
                                         color: appStore.appColorPrimary),
@@ -334,8 +280,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          if (isDemoMode && !widget.isDeviceVerified)
-                            demoModeWidget(),
                         ],
                       ),
                     ),
