@@ -139,11 +139,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  mobx_codegen: ^2.7.1
+  mobx_codegen: ^2.7.2
   build_runner: ^2.4.15
 
 
   flutter_lints: ^6.0.0
+
+dependency_overrides:
+  analyzer: '7.4.0'
+  source_gen: '3.0.0'
 
 flutter_icons:
   android: true
